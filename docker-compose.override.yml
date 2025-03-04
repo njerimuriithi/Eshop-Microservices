@@ -1,5 +1,5 @@
 version: '3.4'
-
+   #Map the port mappings , enviromeny and cobfiguration
 services:
   catalogdb: 
     container_name: catalogdb
