@@ -23,7 +23,7 @@ namespace CatalogAPI.Products.UpdateProduct
            var product = await session.LoadAsync<Product>(command.Id,cancellationToken); 
            if(product is null)
             {
-                throw new productNotFoundException();
+                throw new productNotFoundException(command.Id);
             }
             product.Name = command.Name;
             product.Category = command.Category; 

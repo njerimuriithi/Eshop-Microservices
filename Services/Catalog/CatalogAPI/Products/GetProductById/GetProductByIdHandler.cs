@@ -10,7 +10,7 @@ namespace CatalogAPI.Products.GetProductById
         {
             logger.LogInformation("GetProductbyIdQueryHandler{@query}");
              var product = await session.LoadAsync<Product>(query.id, cancellationToken); 
-            if(product is  null) { throw new productNotFoundException();}
+            if(product is  null) { throw new productNotFoundException(query.id);}
               
             return new GetProductByIdResult(product);
         }
