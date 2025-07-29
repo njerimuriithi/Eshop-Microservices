@@ -14,7 +14,7 @@ namespace Discount.Grpc.Services
             if (coupon is null)
                 coupon = new Coupon { ProductName = "No Discount", Amount = 0, Description = "" };
             var couponModel = coupon.Adapt<CouponModel>();
-            .
+            
             return couponModel;
         }
 
