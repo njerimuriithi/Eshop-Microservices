@@ -92,7 +92,7 @@ namespace Ordering.Infrastructure.Data.Configurations
              });
 
             builder.ComplexProperty(
-                O => O.Paymet, PaymentBuilder =>
+                O => O.Payment, PaymentBuilder =>
                 {
                     PaymentBuilder.Property(p => p.CardName)
                     .HasMaxLength(50);

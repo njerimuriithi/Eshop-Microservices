@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Ordering.Infrastructure.Data.Migrations
+namespace Ordering.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class SecondMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -61,11 +61,11 @@ namespace Ordering.Infrastructure.Data.Migrations
                     BillingAddress_State = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     BillingAddress_ZipCode = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
                     OrderName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Paymet_CVV = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    Paymet_CardName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    Paymet_CardNumber = table.Column<string>(type: "nvarchar(24)", maxLength: 24, nullable: false),
-                    Paymet_Expiration = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    Paymet_PaymentMethod = table.Column<int>(type: "int", nullable: false),
+                    Payment_CVV = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
+                    Payment_CardName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    Payment_CardNumber = table.Column<string>(type: "nvarchar(24)", maxLength: 24, nullable: false),
+                    Payment_Expiration = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Payment_PaymentMethod = table.Column<int>(type: "int", nullable: false),
                     ShippingAddress_AddressLine = table.Column<string>(type: "nvarchar(180)", maxLength: 180, nullable: false),
                     ShippingAddress_Country = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ShippingAddress_EmailAddress = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),

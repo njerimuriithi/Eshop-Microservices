@@ -14,7 +14,7 @@ namespace Ordering.Application.Extensions
                                                 , order.ShippingAddress.EmailAddress!, order.ShippingAddress.State, order.ShippingAddress.ZipCode),
                     BillingAddress: new AddressDto(order.BillingAddress.FirstName, order.BillingAddress.LastName, order.BillingAddress.EmailAddress!, order.BillingAddress.AddressLine
                                                 , order.BillingAddress.EmailAddress!, order.BillingAddress.State, order.BillingAddress.ZipCode),
-                     Payment: new PaymentDto(order.Paymet.CardName!, order.Paymet.CardNumber!, order.Paymet.Expiration, order.Paymet.CVV, order.Paymet.PaymentMethod),
+                     Payment: new PaymentDto(order.Payment.CardName!, order.Payment.CardNumber!, order.Payment.Expiration, order.Payment.CVV, order.Payment.PaymentMethod),
                      Status: order.Status,
                      OrderItems: order.OrderItems.Select(oi => new OrderItemDto(oi.OrderId.Value, oi.ProductId.Value, oi.Quantity, oi.Price)).ToList()
 

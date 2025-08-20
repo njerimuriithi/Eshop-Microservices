@@ -4,20 +4,17 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Ordering.Infrastructure.Data;
 
 #nullable disable
 
-namespace Ordering.Infrastructure.Data.Migrations
+namespace Ordering.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicatioDbContext))]
-    [Migration("20250814145658_InitialCreate")]
-    partial class InitialCreate
+    partial class ApplicatioDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -140,7 +137,7 @@ namespace Ordering.Infrastructure.Data.Migrations
                                 .HasColumnName("OrderName");
                         });
 
-                    b.ComplexProperty<Dictionary<string, object>>("Paymet", "Ordering.Domain.Models.Order.Paymet#Payment", b1 =>
+                    b.ComplexProperty<Dictionary<string, object>>("Payment", "Ordering.Domain.Models.Order.Payment#Payment", b1 =>
                         {
                             b1.IsRequired();
 
