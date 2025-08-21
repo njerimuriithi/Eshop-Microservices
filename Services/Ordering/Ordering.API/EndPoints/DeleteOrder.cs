@@ -3,7 +3,7 @@ using Ordering.Application.Orders.Commands.DeleteOrder;
 
 namespace Ordering.API.EndPoints
 {
-    public record DeleteOrderResponse(bool isSuccess);
+    public record DeleteOrderResponse(bool IsSuccess);
     public class DeleteOrder : ICarterModule
     {
         public void AddRoutes(IEndpointRouteBuilder app)
