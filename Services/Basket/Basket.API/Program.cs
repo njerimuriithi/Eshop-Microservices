@@ -1,4 +1,5 @@
 
+using BuildingBlocks.Messaging.MassTransit;
 using Discount.Grpc;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -42,6 +43,8 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
     };
     return handler;
 });
+//asyncCommunicationSerivices
+builder.Services.AddMessageBroker(builder.Configuration);
 
 
 //cross-cuttingservices
