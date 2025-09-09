@@ -5,7 +5,7 @@ using Ordering.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 //Add services to container
-builder.Services.AddApplicationServices()
+builder.Services.AddApplicationServices(builder.Configuration)
     .AddInfrastuctureServices(builder.Configuration)
     .AddAPIServices(builder.Configuration);
 var app = builder.Build();
