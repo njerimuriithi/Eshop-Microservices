@@ -130,3 +130,22 @@ services:
       - "6063:8081"
     volumes:
       - C:/Users/Admin/AppData/Roaming/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  yarpapigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/home/app/.aspnet/https/aspnetapp.pfx
+    depends_on:
+      - catalogapi
+      - basketapi      
+      - ordering.api
+           
+    ports:
+      - "6004:8080"
+      - "6064:8081"
+    volumes:
+      - C:/Users/Admin/AppData/Roaming/ASP.NET/Https:/home/app/.aspnet/https:ro
+      
